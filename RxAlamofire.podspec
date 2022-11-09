@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.summary = "RxSwift wrapper around the elegant HTTP networking in Swift Alamofire"
   s.homepage = "https://github.com/RxSwiftCommunity/RxAlamofire"
   s.authors = { "RxSwift Community" => "community@rxswift.org" }
-  s.source = { :git => "https://github.com/RxSwiftCommunity/RxAlamofire.git", :tag => "v" + ENV['RELEASE_VERSION'] }
+  s.source = { :git => "https://github.com/tang4595/RxAlamofire.git", :branch => "feature/bexchange-dependency" }
   s.swift_version = "5.1"
 
   s.ios.deployment_target = "10.0"
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files = "Sources/RxAlamofire/*.swift"
     ss.dependency "RxSwift", "~> 6.0"
-    ss.dependency "Alamofire", "~> 5.4"
+    ss.dependency "Alamofire", :git => 'https://github.com/tang4595/Alamofire.git', :branch => 'feature/bexchange-encoding'
     ss.framework = "Foundation"
   end
 
